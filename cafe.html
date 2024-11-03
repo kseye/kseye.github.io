@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>충청남도 불주먹의 카페 탐방기</title>
+    <style>
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #6B4F4F;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            
+        }
+        .student-id {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 0.9em;
+            color: #ddd;
+        }
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            width: 90%;
+            max-width: 1200px;
+            margin-top: 20px;
+        }
+
+        nav {
+            background-color: #9C6B6B;
+            padding: 20px;
+            width: 20%;
+            color: white;
+            box-sizing: border-box;
+        }
+
+        nav p {
+            margin: 0;
+        }
+
+        #searchInput {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            border: none;
+            background-color: #6B4F4F;
+            color: white;
+        }
+
+        #cafe-name {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            background-color: #6B4F4F;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        aside {
+            background-color: #CC9999;
+            padding: 20px;
+            width: 20%;
+            color: white;
+            box-sizing: border-box;
+        }
+
+        section {
+            flex: 1;
+            padding: 20px;
+            background-color: #f1f1f1;
+            box-sizing: border-box;
+        }
+
+        .cafe-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .cafe-list li {
+            margin-bottom: 10px;
+        }
+
+        .cafe-list a {
+            color: #6B4F4F;
+            text-decoration: none;
+        }
+
+        .cafe-list a:hover {
+            text-decoration: underline;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            resize: vertical;
+        }
+
+        button {
+            background-color: #6B4F4F;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background-color: #6B4F4F;
+            color: white;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>샵 내마음 따듯한 커피처럼</h1>
+        <p class="student-id">202402791 김승연</p>
+    </header>
+
+    <div class="container">
+        <nav>
+            <p>찾고 싶은 카페를 입력해주세요</p>
+            <input type="text" id="searchInput" placeholder="카페 이름을 검색하세요" onkeyup="searchCafes()">
+            <button id="cafe-name">검색</button>
+        </nav>
+
+        <aside>
+            <h2>카페 방문 팁</h2>
+            <ul>
+                <li>주말에는 미리 예약하기!!</li>
+                <li>인스타그램 이벤트 참여하기!!</li>
+                <li>시즌 한정 메뉴 기간 확인하기!!</li>
+            </ul>
+
+            <h2>추천 카페 리스트</h2>
+            <ol>
+                <li>헤이데이 - 바닐라라떼 맛집</li>
+                <li>커닝 - 다양한 수제 디저트 제공</li>
+                <li>소신 - 쁘띠가또의 진수</li>
+            </ol>
+        </aside>
+
+        <section>
+            <h2>카페 목록</h2>
+            <p>방문한 카페 목록입니다</p>
+            <ul class="cafe-list">
+                <li><a href="cafe1.html">예산</a></li>
+                <li><a href="cafe2.html">대전</a></li>
+                <li><a href="cafe3.html">서울</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>방명록</h3>
+            <p>웹페이지 방문 소감을 남겨주세요</p>
+            <textarea placeholder="마음을 담아 작성해주세요" rows="5" id="review-text"></textarea>
+            <button id="submit-review">남기기</button>
+        </section>
+    </div>
+
+    <footer>
+        <p>모든 사진 출처: 김승연</p>
+    </footer>
+</body>
+</html>
