@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>충불카탐-헤이데이</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    img {
+        float: left; /* 사진을 왼쪽으로 띄웁니다 */
+        margin-right: 30px; /* 사진과 텍스트 사이에 간격을 둡니다 */
+    }
+
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <li><a href="cafe.html">메인화면</a></li>
+            <li><h3>예산</h3>
+                <ul><a href="yesan1.html">헤이데이</a></ul>
+            </il>
+            <li><h3>대전</h3>
+                <ul><a href="daejeon1.html">소신</a></ul>
+                <ul><a href="daejeon2.html">커닝</a></ul>
+            </li>
+            <li><h3>전주</h3>
+                <ul><a href="jeonju1.html">한 채</a></ul>
+            </li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1 style="display: inline;">헤이데이</h1><h3 style="display: inline;">[충남예산]</h3>
+        <p><a href="https://naver.me/xgNSUHdE"  title="클릭하면 해당 위치의 지도로 이동됩니다">위치-<span style="color: rgb(83, 83, 83);">충청남도 예산군 예산읍 신례원리 303-6</span></a></p>
+        <img src="헤이데이.jpg" style="width: 500px; height: auto;">
+        <h2>작은 시골의 아늑한 카페, 헤이데이</h2>
+    <pre> 
+ 헤이데이는 충남 예산에 위치한 작은 카페입니다.
+오래된 건물 2층을 개조해 만든 카페라 올라가는 길은 조금 험합니다.
+하지만 당신이 바닐라라떼를 좋아한다면 이 곳을 매우 추천합니다!
+    </pre>
+    <h1>추천메뉴</h1>
+    <ul>
+        <li id="menu">  <strong>바닐라라떼</strong> - <br>제가 여태 먹어본 커피 중 가장 고소한 바닐라라떼입니다, 수제 바닐라시럽을 사용하셔서 바닐라빈도 볼 수 있습니다</li>
+        <li id="menu">  <strong>바스크 치즈 케이크</strong> - <br>매일 나오는 메뉴는 아닙니다, 특히 옥수수 바스크 치즈케이크가 꾸덕하고 맛있습니다. 미리 문의드리는 것을 추천드려요!</li>
+    </ul>
+    </div>
+    <script>
+        window.onload = function() {
+            const currentPage = window.location.pathname.split("/").pop(); 
+            const links = document.querySelectorAll(".sidebar a");
+            
+            links.forEach(link => {
+                if (link.href.includes(currentPage)) {
+                    link.style.fontWeight = "bold"; 
+                    link.style.color = "orange"
+                }
+            });
+        }
+    </script>
+</body>   
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>충불카탐-한 채채</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    img {
+        float: left; 
+        margin-right: 30px; 
+    }
+
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <li><a href="cafe.html">메인화면</a></li>
+            <li><h3>예산</h3>
+                <ul><a href="yesan1.html">헤이데이</a></ul>
+            </il>
+            <li><h3>대전</h3>
+                <ul><a href="daejeon1.html">소신</a></ul>
+                <ul><a href="daejeon2.html">커닝</a></ul>
+            </li>
+            <li><h3>전주</h3>
+                <ul><a href="jeonju1.html">한 채</a></ul>
+            </li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1 style="display: inline;">한 채채</h1><h3 style="display: inline;">[전주주]</h3>
+        <p><a href="https://naver.me/FzSZNgLY"  title="클릭하면 해당 위치의 지도로 이동됩니다">위치-<span style="color: rgb(83, 83, 83);">전북특별자치도 전주시 완산구 고사동 205번지 KR 1층</span></a></p>
+        <img src="한채.jpg" style="width: 500px; height: auto;">
+        <h2>보기만 해도 기분 좋아지는 디저트, 한 채 </h2>
+    <pre> 
+ 한 채는 전주의 객사에 위치한 독채 카페입니다. 넓진 않지만 한옥으로 아늑한 분위기가 가득합니다.
+ 귀여운 디저트를 많이 판매하고 있습니다. 다만 테이블이 붙어있어 개인적인 대화를 하긴 좀 어렵습니다. 
+ 야외에도 테이블이 있고 전체적으로 아기자기하고 귀여운 분위기 입니다.
+    </pre>
+    <h1>추천메뉴</h1>
+    <ul>
+        <li>  <strong>:)</strong> - <br>맛을 고려하고 오는 카페는 아닌 것 같습니다.</li>
+    </ul>
+    </div>
+    <script>
+        window.onload = function() {
+            const currentPage = window.location.pathname.split("/").pop(); // 현재 URL에서 파일 이름 추출
+            const links = document.querySelectorAll(".sidebar a");
+            
+            links.forEach(link => {
+                if (link.href.includes(currentPage)) {
+                    link.style.fontWeight = "bold"; 
+                    link.style.color = "orange";
+                }
+            });
+        }
+    </script>
+</body>   
+</html>
